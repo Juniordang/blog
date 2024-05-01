@@ -43,6 +43,8 @@ h1.c-logo {
 h1.c-logo > i {
     color: var(--abacate)   
 }
+/* button article */
+
 #s-container {
     padding: 0 2rem;
 }
@@ -55,20 +57,25 @@ header .c-head {
 }
 .c-head {
     display: grid;
-    align-items: center;
+    align-items: flex-end;
     grid-template-columns: auto 1fr;
     margin-bottom: 2rem;
     padding-bottom: .7rem;
-    border-bottom: var(--border)
+    border-bottom: var(--border);
+
 }
 .c-head button {
-    justify-self: center;
     all: unset;
-    font-size: 3rem;
+    text-align: center;
+    width: 3.2rem;
 }
 .c-head button:hover {
     cursor: pointer;
     color: var(--abacate);
+}
+.c-head button > i {
+   font-size: 3.2rem;
+    padding-top: .4rem;
 }
 
 .c-menu {
@@ -133,7 +140,7 @@ footer {
     }
     header {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         border-bottom: var(--border);
     }
@@ -175,9 +182,11 @@ footer {
     }
     header {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         border-bottom: var(--border);
+        padding-left: 2rem;
+        padding-right: 4rem;
     }
     header .c-head {
         all: unset;
