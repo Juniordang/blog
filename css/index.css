@@ -12,12 +12,14 @@
     font-size: 62.5%;
     --font-dmSans: 'Dm sans', arial, sans-serif;
     --font: 'Space grotesk', arial, helvetica, sans-serif;
-    --border: 1px solid #bbb7b7bc;
+    --border: 1px solid #484747bc;
+    --shadow: 0px 6px 7px 0px #0000006e;
     --bg-header: #fff;
-    --abacate: #0be00b;
-    --bg-body: #dbe5db;
-    --btn: #3fbd7a;
-    --btn-hover: #4cad79;
+    --abacate: #2dd578;
+    --bg-body: #caf0f8;
+    --btn: #00b4d8;
+    --btn-hover: #0077b6;
+    --link-hover-color: #1792ae;
 }
 body, button, a {
     font: 400 1.6rem var(--font);
@@ -64,6 +66,7 @@ h1.c-logo > i {
 }
 .c-button a:hover {
     background: var(--btn-hover);
+    cursor: pointer;
 }
 .c-button a i {
     font-size: 2rem;
@@ -94,7 +97,7 @@ header .c-head {
 }
 .c-head button:hover {
     cursor: pointer;
-    color: var(--abacate);
+    color: var(--link-hover-color);
 }
 .c-head button > i {
    font-size: 3.2rem;
@@ -107,6 +110,7 @@ header .c-head {
     padding: 1rem 1.5rem;
     width: 20rem;
     display: block;
+    box-shadow: var(--shadow);
 }
 .c-menu li {
     margin-bottom: .5rem;
@@ -117,25 +121,29 @@ header .c-head {
     text-transform: uppercase;
 }
 .c-menu a:hover {
-    text-decoration: underline;
+    color: var(--link-hover-color)
 }
 /* main */
 main {
     width: 30rem;
-    margin: 4rem auto;
+    margin: 5rem auto;
 }
 main h1 {
     font: 700 2.7rem var(--font-dmSans);
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: .2rem;
 }
 main article {
     width: 100%;
-    border: 1px solid #4d4b4be0;
     border-radius: 1.5rem;
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     background-color: white;
+    box-shadow: var(--shadow);
+}
+article h2 {
+    font-family: var(--font-dmSans);
 }
 article p {
     text-align: justify;
@@ -148,12 +156,8 @@ footer {
     padding: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-top: var(--border);
-}
-.c-social i {
-    font-size: 2.2rem;
-    
 }
 /* responsive */
 /* tablet */
@@ -198,16 +202,20 @@ footer {
     main section {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        gap: 2rem;
+        column-gap: 2rem;
+        margin-top: 2rem;
     }
+    
     section article {
         height: 47rem;
         padding-bottom: 2rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
+        row-gap: 2rem;
+        column-gap: 1.5rem;
+
     }
     article h2 {
         font-size: 2.2rem;
